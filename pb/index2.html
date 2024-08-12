@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> CSE1500 Final </title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .square {
+            position: relative;
+            width: calc(50vw - 10px);
+            height: calc(50vh - 10px);
+            background-color: lightblue;
+            color: black;
+            border: 5px solid white;
+            font-size: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div+.square {
+            background-color: orange;
+        }
+
+        .square+.square {
+            background-color: lightblue;
+        }
+        
+        .square+.square+.square {
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="square odd">S1 </div>
+        <div class="square even">S2 </div>
+        <div class="square odd">S3 </div>
+        <div class="square even">S4 </div>
+    </div>
+</body>
+
+</html>
